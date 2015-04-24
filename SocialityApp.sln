@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialityApp", "SocialityApp\SocialityApp.csproj", "{D5F908CD-CFB3-44CC-AC3E-A624C7714085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialityApp.Tests", "SocialityApp.Tests\SocialityApp.Tests.csproj", "{B6E79500-8350-4193-8DAB-EE1EBF2AE2F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{71283DAD-D3F4-4128-A807-684EE30EABEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5F908CD-CFB3-44CC-AC3E-A624C7714085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F908CD-CFB3-44CC-AC3E-A624C7714085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F908CD-CFB3-44CC-AC3E-A624C7714085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F908CD-CFB3-44CC-AC3E-A624C7714085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6E79500-8350-4193-8DAB-EE1EBF2AE2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E79500-8350-4193-8DAB-EE1EBF2AE2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E79500-8350-4193-8DAB-EE1EBF2AE2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E79500-8350-4193-8DAB-EE1EBF2AE2F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71283DAD-D3F4-4128-A807-684EE30EABEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71283DAD-D3F4-4128-A807-684EE30EABEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71283DAD-D3F4-4128-A807-684EE30EABEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71283DAD-D3F4-4128-A807-684EE30EABEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
