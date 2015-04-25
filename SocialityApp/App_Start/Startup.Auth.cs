@@ -82,11 +82,11 @@ namespace SocialityApp
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "320583182272-2nekpbvdth9h8e1uspbor6tcinv9hbo8.apps.googleusercontent.com",
+                ClientSecret = "c9xjCpIZrjGi-fMtGmEJEIar"
+            });
         }
     }
 }
