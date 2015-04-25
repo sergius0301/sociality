@@ -78,9 +78,9 @@ namespace SocialityApp
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //    appId: "",
-            //    appSecret: "");
+            app.UseFacebookAuthentication(
+                appId: "834971506540569",
+                appSecret: "ce69a0e57bc2c05bd8b1f276ad75dc5d");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
