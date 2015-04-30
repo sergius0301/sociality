@@ -10,6 +10,7 @@ using SocialityApp.Models;
 
 namespace SocialityApp.Controllers
 {
+    [Authorize]
     public class PostsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
