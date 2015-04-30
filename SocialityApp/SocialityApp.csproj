@@ -204,11 +204,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504241750325_InitialCreate.cs" />
+    <Compile Include="Migrations\201504241750325_InitialCreate.Designer.cs">
+      <DependentUpon>201504241750325_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504301231065_DataMigration.cs" />
+    <Compile Include="Migrations\201504301231065_DataMigration.Designer.cs">
+      <DependentUpon>201504301231065_DataMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504301240581_Add Posts to Users.cs" />
+    <Compile Include="Migrations\201504301240581_Add Posts to Users.Designer.cs">
+      <DependentUpon>201504301240581_Add Posts to Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504301243187_Add Posts to User.cs" />
+    <Compile Include="Migrations\201504301243187_Add Posts to User.Designer.cs">
+      <DependentUpon>201504301243187_Add Posts to User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504301249211_Add Title to Posts model.cs" />
+    <Compile Include="Migrations\201504301249211_Add Title to Posts model.Designer.cs">
+      <DependentUpon>201504301249211_Add Title to Posts model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountApiViewModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Posts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -303,6 +325,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201504241750325_InitialCreate.resx">
+      <DependentUpon>201504241750325_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504301231065_DataMigration.resx">
+      <DependentUpon>201504301231065_DataMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504301240581_Add Posts to Users.resx">
+      <DependentUpon>201504301240581_Add Posts to Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504301243187_Add Posts to User.resx">
+      <DependentUpon>201504301243187_Add Posts to User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504301249211_Add Title to Posts model.resx">
+      <DependentUpon>201504301249211_Add Title to Posts model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
