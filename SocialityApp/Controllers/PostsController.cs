@@ -138,6 +138,11 @@ namespace SocialityApp.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+       
+        public ActionResult Wall(){
+            return View(db.Posts.ToList());
+
+        }
 
         protected override void Dispose(bool disposing)
         {
