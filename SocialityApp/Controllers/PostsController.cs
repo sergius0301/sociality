@@ -7,18 +7,33 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SocialityApp.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace SocialityApp.Controllers
 {
     [Authorize]
     public class PostsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db;
+        private UserManager<ApplicationUser> manager;
 
+
+        public PostsController()
+        {
+            db = new ApplicationDbContext();
+            manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+
+         }
         // GET: Posts
         public ActionResult Index()
         {
-            return View(db.Posts.ToList());
+             var currentUser = manager.FindById(User.Identity.GetUserId());
+
+
+             return View(db.Posts.ToList().Where(p=>p.UserId==currentUser.Id));
+
+            
         }
 
         // GET: Posts/Details/5
@@ -39,6 +54,7 @@ namespace SocialityApp.Controllers
         // GET: Posts/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -51,6 +67,10 @@ namespace SocialityApp.Controllers
         {
             if (ModelState.IsValid)
             {
+               
+
+                var currentUser =  manager.FindById(User.Identity.GetUserId());
+                posts.User = currentUser;
                 db.Posts.Add(posts);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -81,6 +101,9 @@ namespace SocialityApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Title,Description")] Posts posts)
         {
+            
+
+
             if (ModelState.IsValid)
             {
                 db.Entry(posts).State = EntityState.Modified;

@@ -225,6 +225,14 @@
     <Compile Include="Migrations\201504301249211_Add Title to Posts model.Designer.cs">
       <DependentUpon>201504301249211_Add Title to Posts model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505041207599_add DataAnnotations.cs" />
+    <Compile Include="Migrations\201505041207599_add DataAnnotations.Designer.cs">
+      <DependentUpon>201505041207599_add DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071830021_add UserID Foreign key.cs" />
+    <Compile Include="Migrations\201505071830021_add UserID Foreign key.Designer.cs">
+      <DependentUpon>201505071830021_add UserID Foreign key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountApiViewModels.cs" />
@@ -347,6 +355,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504301249211_Add Title to Posts model.resx">
       <DependentUpon>201504301249211_Add Title to Posts model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505041207599_add DataAnnotations.resx">
+      <DependentUpon>201505041207599_add DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071830021_add UserID Foreign key.resx">
+      <DependentUpon>201505071830021_add UserID Foreign key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

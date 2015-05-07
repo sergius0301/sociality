@@ -3,6 +3,11 @@
 @{
     ViewBag.Title = "Posts";
 }
+<p>
+    @{
+        SocialityApp.Models.ApplicationDbContext db = new SocialityApp.Models.ApplicationDbContext();
+    }
+</p>
 
 <br>
 
@@ -20,9 +25,14 @@
     <h1>
         @Html.DisplayFor(modelItem => item.Title)
     </h1>
+    <h5>
+       Author:
+        <i>@db.Users.FirstOrDefault(user=>user.Id==item.UserId).Email</i>
+        </h5>
     <p>
         @Html.DisplayFor(modelItem => item.Description)
     </p>
+    
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
         @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-primary" })
