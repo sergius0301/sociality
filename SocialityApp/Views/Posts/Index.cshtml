@@ -26,13 +26,9 @@
         @Html.DisplayFor(modelItem => item.Title)
     </h1>
     <h5>
-        Author:
-        <i>@db.Users.FirstOrDefault(user => user.Id == item.UserId).Email</i>:
-     
-    </h5>
-    <h5>
-        On:  <i>@String.Format("{0:dd-MM-yyyy}", item.Time)</i>
-    </h5>
+       Author:
+        <i>@db.Users.FirstOrDefault(user=>user.Id==item.UserId).Email</i>
+        </h5>
     <p>
         @Html.DisplayFor(modelItem => item.Description)
     </p>

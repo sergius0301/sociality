@@ -71,7 +71,6 @@ namespace SocialityApp.Controllers
 
                 var currentUser =  manager.FindById(User.Identity.GetUserId());
                 posts.User = currentUser;
-                posts.Time = DateTime.Now;
                 db.Posts.Add(posts);
                 db.SaveChanges();
                 return RedirectToAction("Index");

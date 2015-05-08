@@ -17,8 +17,5 @@ namespace SocialityApp.Models
         [Required]
         [StringLength(2000, ErrorMessage = "The {0} must be at least {2} character long", MinimumLength = 5)]
         public string Description { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{dd-MM-YY}")]
-        public DateTime Time { get; set; }
     }
 }
