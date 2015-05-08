@@ -233,6 +233,10 @@
     <Compile Include="Migrations\201505071830021_add UserID Foreign key.Designer.cs">
       <DependentUpon>201505071830021_add UserID Foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505072021391_Add time to Posts.cs" />
+    <Compile Include="Migrations\201505072021391_Add time to Posts.Designer.cs">
+      <DependentUpon>201505072021391_Add time to Posts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountApiViewModels.cs" />
@@ -362,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505071830021_add UserID Foreign key.resx">
       <DependentUpon>201505071830021_add UserID Foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505072021391_Add time to Posts.resx">
+      <DependentUpon>201505072021391_Add time to Posts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
