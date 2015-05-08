@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SocialityApp.Models.Posts>
+
+@{
+    ViewBag.Title = "Posts";
+}
+<p>
+    @{
+        SocialityApp.Models.ApplicationDbContext db = new SocialityApp.Models.ApplicationDbContext();
+    }
+</p>
+
+<br>
+
+<p>
+    <a href="@Url.Action("Create", "Posts")" class="btn btn-primary">
+        Write a new post
+        <span class="glyphicon glyphicon-edit" />
+    </a>
+    </p>
+<br>
+
+@foreach (var item in Model) {
+    
+<div class="jumbotron">
+    <h1>
+        @Html.DisplayFor(modelItem => item.Title)
+    </h1>
+    <h5>
+        Author:
+        <i>@db.Users.FirstOrDefault(user => user.Id == item.UserId).Email</i>:
+     
+    </h5>
+    <h5>
+        On:  <i>@String.Format("{0:dd-MM-yyyy}", item.Time)</i>
+    </h5>
+    <p>
+        @Html.DisplayFor(modelItem => item.Description)
+    </p>
+    
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-primary" })
+    </p>
+</div>
+
+
+
+}
+
