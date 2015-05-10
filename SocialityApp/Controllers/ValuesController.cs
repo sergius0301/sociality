@@ -16,8 +16,8 @@ namespace SocialityApp.Controllers
         // GET api/values
         public dynamic Get()
         {
-            //return new string[] { "value1", "value2" };
-            return db.Posts.Select(i => new { i.Id, i.User.Email, i.Title, i.Description });
+            return new string[] { "value1", "value2" };
+          //  return db.Posts.Select(i => new { Id = i.Id, i.User.Email, i.Title, i.Description });
   
         }
 

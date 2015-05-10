@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -63,12 +62,26 @@ namespace SocialityApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Description")] Posts posts)
+        public ActionResult Create([Bind(Include = "Id,Title,Description")] Posts posts, HttpPostedFileBase upload)
         {
             if (ModelState.IsValid)
             {
-               
+               if(upload!=null&&upload.ContentLength>0)
+               {
+                   var file = new SocialityApp.Models.File
+                   {
+                       FileName = System.IO.Path.GetFileName(upload.FileName),
+                       ContentType = upload.ContentType
 
+                   };
+                   using (var reader = new System.IO.BinaryReader(upload.InputStream))
+                   {
+                       file.Content = reader.ReadBytes(upload.ContentLength);
+                   }
+                   posts.File = new List<SocialityApp.Models.File> { file };
+                  
+               }
+               
                 var currentUser =  manager.FindById(User.Identity.GetUserId());
                 posts.User = currentUser;
                 posts.Time = DateTime.Now;

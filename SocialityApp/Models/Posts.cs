@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SocialityApp.Models
 {
     public class Posts
     {
         public int Id { get; set; }
+         [ForeignKey("User")]
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
         [Required]
@@ -20,5 +22,9 @@ namespace SocialityApp.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{dd-MM-YY}")]
         public DateTime Time { get; set; }
+        [ForeignKey("File")]
+        public int FileId { get; set; }
+        public virtual ICollection<SocialityApp.Models.File> File { get; set; }
+       
     }
 }

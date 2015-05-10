@@ -33,6 +33,7 @@ namespace SocialityApp.Models
     {
 
         public DbSet<Posts> Posts { get; set; }
+        public DbSet<File> Files { get; set; }
 
         public ApplicationDbContext()
             : base("ProductionConnection", throwIfV1Schema: false)
